@@ -1,5 +1,9 @@
 <%= div_for @post do %>
 	<h2> <%= link_to_unless_current h(@post.title) %> </h2>
-	<%= simple_format h(@post.body) %>
-	<%= h(User.find(@post.user_id).name) %>
+    Body:
+	<%= h(@post.body) %>
+    <p>
+    Author:
+	<%= h(@post.user_id) %>
+    </p>
 <% end %>

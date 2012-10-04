@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :body, :title
+  attr_accessible :body, :title, :user_id
   
   
   has_many :comments
@@ -7,6 +7,6 @@ class Post < ActiveRecord::Base
     
   validates :title, :presence => true
   validates :body, :presence => true
-
+  validates :user_id, :presence => true
   
 end
